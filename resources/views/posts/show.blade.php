@@ -1,9 +1,10 @@
 <x-layout>
     <x-slot name="title">
-        {{ $post }} - MyBBS
+        {{ $post->title }} - MyBBS
     </x-slot>
     <div class="back-link">
         &laquo; <a href="{{ route('posts.index') }}">Back</a>
     </div>
-    <h1>{{ $post }}</h1>
+    <h1>{{ $post->title }}</h1>
+    <p>{{ $post->body }}</p>
 </x-layout>
