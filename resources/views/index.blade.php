@@ -4,10 +4,10 @@
     </x-slot>
     <h1>MyBBS</h1>
         <ul>
-            @forelse ($posts as $index => $post)
+            @forelse ($posts as $post)
                 <li>
-                    <a href="{{ route('posts.show', ['id' => $index]) }}">
-                        {{ $post }}
+                    <a href="{{ route('posts.show', $post) }}">
+                        {{ $post->title }}
                     </a>
                 </li>
             @empty
