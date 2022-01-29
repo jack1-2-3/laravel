@@ -2,7 +2,10 @@
     <x-slot name="title">
         MyBBS
     </x-slot>
-    <h1>MyBBS</h1>
+    <h1>
+        <span>MyBBS</span>
+        <a href="{{ route('posts.create') }}">[Add]</a>
+    </h1>
         <ul>
             @forelse ($posts as $post)
                 <li>
